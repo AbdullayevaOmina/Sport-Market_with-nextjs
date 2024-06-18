@@ -34,7 +34,7 @@ const Carusel = () => {
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       autoplay={{ delay: 3000, disableOnInteraction: false }}
-      className="min-w-[820x]"
+      className="min-w-[820x] cursor-pointer"
     >
       {imgList.map((item, index) => {
         return (
