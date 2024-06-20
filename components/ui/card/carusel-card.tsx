@@ -16,7 +16,7 @@ function Index({ text, bg, img }: Props) {
 
   return (
     <>
-      <div className="group w-[292px] h-[416px] rounded-md relative overflow-hidden ">
+      <div className="group w-[292px] h-[416px] rounded-md relative overflow-hidden">
         {bg && (
           <div
             style={{ background: bg }}
@@ -81,7 +81,7 @@ function Index({ text, bg, img }: Props) {
             750 000
           </del>
         </div>
-        <button className="flex w-full items-center justify-center gap-3 py-[15px] bg-[#FBD029] rounded-br-md rounded-bl-md">
+        <button className="flex w-full items-center justify-center gap-3 py-[15px] bg-[#FBD029] rounded-br-md rounded-bl-md absolute bottom-0 ">
           <i className="bi bi-cart3"></i>
           Корзина
         </button>

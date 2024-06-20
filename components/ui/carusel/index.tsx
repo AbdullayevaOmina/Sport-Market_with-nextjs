@@ -1,6 +1,4 @@
 "use client";
-
-// import Swiper core and required modules
 import {
   Navigation,
   Pagination,
@@ -8,18 +6,13 @@ import {
   A11y,
   Autoplay,
 } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import Image from "next/image";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./style.scss";
-
 import ImageCarusel from "../../../assets/images/img-carusel1.png";
 import { mainPageStIcon } from "@/assets/icons/global";
 
@@ -56,7 +49,7 @@ const Carusel = () => {
                 <div className="relative h-[488x]">
                   <div className=" absolute top-[55px] left-[20px] w-[380px] h-[380px] rounded-[50%] bg-red-500 z-0"></div>
                   <div className="absolute top-[-75px] left-[130px]  rotate-[25deg] w-[355px] h-[921px]  bg-[#BDD400] z-0" />
-                  <div className=" sticky z-10  pr-5">
+                  <div className="sticky z-10  pr-5">
                     <Image
                       src={item}
                       alt="Carusel img"

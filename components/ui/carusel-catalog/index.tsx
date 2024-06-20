@@ -67,7 +67,6 @@ export default function CaruselCatalog() {
           spaceBetween: 60,
         },
       }}
-      onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
       className="mySwiper"
     >

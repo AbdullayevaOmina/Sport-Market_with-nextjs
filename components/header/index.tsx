@@ -9,8 +9,8 @@ function Header() {
 
   const data = [
     { title: "Продукты", path: "/products" },
-    { title: "Контакты", path: "/contacts" },
-    { title: "Оплата и Доставка", path: "/payment" },
+    { title: "Контакты", path: "/contact" },
+    { title: "Оплата и Доставка", path: "/delivery" },
     { title: "Новости", path: "/news" },
     { title: "О нас", path: "/about" },
   ];

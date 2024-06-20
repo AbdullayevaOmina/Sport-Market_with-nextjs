@@ -21,61 +21,38 @@ const Carusel = ({ text, bg }: Props) => {
   return (
     <div className="carousel-container">
       <Swiper
-        spaceBetween={20}
+        spaceBetween={10}
         slidesPerView={1}
         navigation
         loop={true}
         breakpoints={{
           640: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 30,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 40,
           },
-          1280: {
-            slidesPerView: 4,
+          1900: {
+            slidesPerView: 5,
             spaceBetween: 50,
           },
         }}
-        className="mySwiper"
+        className="mySwiper bg"
       >
-        <SwiperSlide style={{ borderRadius: 10 }}>
-          <CaruselCard text={text} bg={bg} img={all_mages[0]} />
-        </SwiperSlide>
-        <SwiperSlide style={{ borderRadius: 10 }}>
-          <CaruselCard text={text} bg={bg} img={all_mages[1]} />
-        </SwiperSlide>
-        <SwiperSlide style={{ borderRadius: 10 }}>
-          <CaruselCard text={text} bg={bg} img={all_mages[2]} />
-        </SwiperSlide>
-        <SwiperSlide style={{ borderRadius: 10 }}>
-          <CaruselCard text={text} bg={bg} img={all_mages[3]} />
-        </SwiperSlide>
-        <SwiperSlide style={{ borderRadius: 10 }}>
-          <CaruselCard text={text} bg={bg} img={all_mages[4]} />
-        </SwiperSlide>
-        <SwiperSlide style={{ borderRadius: 10 }}>
-          <CaruselCard text={text} bg={bg} img={all_mages[5]} />
-        </SwiperSlide>
-        <SwiperSlide style={{ borderRadius: 10 }}>
-          <CaruselCard text={text} bg={bg} img={all_mages[0]} />
-        </SwiperSlide>
-        <SwiperSlide style={{ borderRadius: 10 }}>
-          <CaruselCard text={text} bg={bg} img={all_mages[1]} />
-        </SwiperSlide>
-        <SwiperSlide style={{ borderRadius: 10 }}>
-          <CaruselCard text={text} bg={bg} img={all_mages[2]} />
-        </SwiperSlide>
-        <SwiperSlide style={{ borderRadius: 10 }}>
-          <CaruselCard text={text} bg={bg} img={all_mages[3]} />
-        </SwiperSlide>
-        {/* Add more slides as needed */}
+        {all_mages.map((img, index) => (
+          <SwiperSlide
+            key={index}
+            style={{ borderRadius: 10 }}
+          >
+            <CaruselCard text={text} bg={bg} img={img} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
