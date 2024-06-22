@@ -1,8 +1,12 @@
 import { homeIcon, strelkaRightIcon } from "@/assets/icons/global";
-import { Input, Slider } from "antd";
+import { Input, Select, Slider } from "antd";
 import Link from "next/link";
 
 const Products = () => {
+  const handleChange = (value: string) => {
+    console.log(`selected ${value}`);
+  };
+
   return (
     <div className="h-[100vh]  bg-[#F2F2F2]">
       <div className="container bg-[#F2F2F2]">
@@ -29,7 +33,17 @@ const Products = () => {
               <small>Артикул:</small>
               <Input placeholder="аф566" variant="filled" />
               <small>Выберите категорию:</small>
-              
+              <Select
+                defaultValue="lucy"
+                style={{ width: 120 }}
+                onChange={handleChange}
+                options={[
+                  { value: "jack", label: "Jack" },
+                  { value: "lucy", label: "Lucy" },
+                  { value: "Yiminghe", label: "yiminghe" },
+                  { value: "disabled", label: "Disabled", disabled: true },
+                ]}
+              />
             </div>
           </div>
           <div className="w-[80%]"></div>

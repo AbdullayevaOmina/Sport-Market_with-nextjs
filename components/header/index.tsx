@@ -3,6 +3,8 @@ import { useState } from "react";
 import Image from "next/image";
 import logo from "../../assets/icons/logo.svg";
 import Link from "next/link";
+import { SignInModal, SignUpModal } from "../modals";
+import { Button, Dropdown, MenuProps, Space } from "antd";
 
 function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -18,6 +20,19 @@ function Header() {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+  const items: MenuProps["items"] = [
+    {
+      key: "1",
+      // label: <SignInModal />,
+      label: <Link href="signin">Войти</Link>,
+    },
+    {
+      key: "2",
+      // label: <SignUpModal />,
+      label: <Link href="signup">Зарегистрироваться</Link>,
+    },
+  ];
 
   return (
     <>
@@ -85,9 +100,15 @@ function Header() {
               </div>
             </div>
             <div className="flex items-center gap-3 md:gap-4">
-              <button className="rounded bg-[#F2F2F2] text-black p-2 md:p-3">
-                <i className="bi bi-person"></i>
-              </button>
+              <Dropdown
+                menu={{ items }}
+                placement="bottom"
+                arrow={{ pointAtCenter: true }}
+              >
+                <button className="rounded bg-[#F2F2F2] text-black p-2 md:p-3">
+                  <i className="bi bi-person" />
+                </button>
+              </Dropdown>
               <button className="rounded bg-[#F2F2F2] text-black p-2 md:p-3">
                 <i className="bi bi-heart"></i>
               </button>
