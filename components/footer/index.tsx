@@ -5,10 +5,14 @@ function Footer() {
   return (
     <>
       <div className="w-full h-6 bg-[#FBD029]"></div>
-      <div className="w-full pt-16 pb-11 bg-[#1F1D14] border-b border-[rgba(242,242,242,0.3)]">
+      <div className="w-full pt-5 md:pt-16 pb-11 bg-[#1F1D14] border-b border-[rgba(242,242,242,0.3)]">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-start justify-between gap-10">
-            <Image src={logo} alt="logo" width={189} height={59} />
+            <Image
+              src={logo}
+              alt="logo"
+              className="w-[150px] h-[45px] md:w-[189px] md:h-[59px]"
+            />
             <div className="flex flex-col gap-5">
               <p className="text-lg font-bold text-white">Контакты</p>
               <p className="text-white flex items-center gap-2">
@@ -23,19 +27,22 @@ function Footer() {
               <i className="bi bi-geo-alt text-white"></i>Tashkent Sh. Chilonzor
               9 kvartal <br /> 12 uy
             </p>
-            <div>
+            <div className="w-full md:w-auto">
               <p className="text-lg font-bold text-white">Подписатся</p>
-              <form action="#" className="flex flex-col gap-4 pt-4">
+              <form action="#" className="grid gap-4 pt-4">
                 <input
                   type="text"
-                  className="w-60 py-2 px-4 bg-white rounded-sm outline-none text-[#9A9EA5] placeholder:text-[#9A9EA5]"
+                  className="w-full md:w-70 py-2 px-4 bg-white rounded-sm outline-none text-[#9A9EA5] placeholder:text-[#9A9EA5]"
                   placeholder="support@figma.com"
                 />
-                <button className="w-60 py-2 px-4 bg-[#FBD029] rounded-sm text-center">
+                <button
+                  disabled
+                  className="w-full md:w-70 py-2 px-4 bg-[#FBD029] rounded-sm text-center"
+                >
                   Отправить
                 </button>
               </form>
-              <div className="flex items-center gap-5 pt-10">
+              <div className="flex items-center justify-center gap-6 pt-10">
                 <i className="bi text-white text-2xl bi-instagram"></i>
                 <i className="bi text-white text-2xl bi-facebook"></i>
                 <i className="bi text-white text-2xl bi-telegram"></i>

@@ -46,11 +46,9 @@ const Carusel = ({ text, bg }: Props) => {
         className="mySwiper bg"
       >
         {all_mages.map((img, index) => (
-          <SwiperSlide
-            key={index}
-            style={{ borderRadius: 10 }}
-          >
-            <CaruselCard text={text} bg={bg} img={img} />
+          <SwiperSlide key={index} style={{ borderRadius: 10 }}>
+            {/* <CaruselCard text={text} bg={bg} img={img} /> */}
+            <div className="w-[200px] h-[330px]"></div>
           </SwiperSlide>
         ))}
       </Swiper>

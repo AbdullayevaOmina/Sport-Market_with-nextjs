@@ -126,7 +126,7 @@ const SignInModal: React.FC = () => {
           </div>
 
           <Form.Item>
-            <Button type="primary" htmlType="submit" className="w-full">
+            <Button htmlType="submit" className="w-full bg-[#fbd02a]">
               Submit
             </Button>
           </Form.Item>

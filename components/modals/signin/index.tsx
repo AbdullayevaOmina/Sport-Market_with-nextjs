@@ -36,7 +36,7 @@ const SignInModal: React.FC = () => {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="text-blue-600"
+        className="text-[#FBD029] w-full"
       >
         Войти
       </button>
@@ -48,7 +48,12 @@ const SignInModal: React.FC = () => {
         footer={null}
         className="p-20"
       >
-        <b className="text-center text-2xl">Войти</b>
+        <b className="text-center text-2xl block">Вход в аккаунт</b>
+        <br />
+        <div className="">
+          <span>Если Вы не зарегистрированы, нажмите кнопку</span>{" "}
+          <button className="text-[#FBD029]">Зарегистрироваться</button>
+        </div>
         <Form
           name="basic"
           labelCol={{ span: 8 }}
@@ -58,7 +63,7 @@ const SignInModal: React.FC = () => {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
           autoComplete="off"
-          className="mt-8"
+          className="mt-5"
         >
           <Form.Item<FieldType>
             name="email"
@@ -73,16 +78,14 @@ const SignInModal: React.FC = () => {
           >
             <Input.Password placeholder="Password" />
           </Form.Item>
-
-          <div className="flex justify-between items-center w-[390px] mb-3">
-            <span>У вас уже есть аккаунт?</span>
-            <button className="text-blue-600">Зарегистрироваться</button>
-          </div>
-
+          <h1 className="text-[#917BFF] mb-3">Забыли пароль!</h1>
           <Form.Item>
-            <Button type="primary" htmlType="submit" className="w-full">
-              Submit
-            </Button>
+            <button
+              type="submit"
+              className="w-full bg-[#FBD029] rounded-lg py-2"
+            >
+              Войти
+            </button>
           </Form.Item>
         </Form>
       </Modal>

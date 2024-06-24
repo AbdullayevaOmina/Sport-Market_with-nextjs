@@ -21,8 +21,6 @@ const SignInModal: React.FC = () => {
   const router = useRouter();
 
   const onFinish: FormProps<SignIn>["onFinish"] = async (values) => {
-    console.log("Success:", values);
-
     try {
       const status = await login(values);
       console.log("Login status:", status);
@@ -39,7 +37,14 @@ const SignInModal: React.FC = () => {
   return (
     <div className="flex justify-center h-[80vh] bg-[#F2F2F2] py-8">
       <Card className="flex items-center justify-center text-center h-[300px]">
-        <b className="text-2xl">Войти</b>
+        <b className="text-2xl">Вход в аккаунт</b>
+
+        <div className="">
+          <span>Если Вы не зарегистрированы, нажмите кнопку</span>{" "}
+          <Link href="signup" className="text-[#FBD029]">
+            Зарегистрироваться
+          </Link>
+        </div>
         <Form
           name="basic"
           labelCol={{ span: 8 }}
@@ -82,16 +87,8 @@ const SignInModal: React.FC = () => {
           >
             <Input.Password placeholder="Password" />
           </Form.Item>
-
-          <div className="flex justify-between items-center w-[390px] mb-3">
-            <span>У вас уже есть аккаунт?</span>
-            <Link href="signup" className="text-blue-600">
-              Зарегистрироваться
-            </Link>
-          </div>
-
           <Form.Item>
-            <Button type="primary" htmlType="submit" className="w-full">
+            <Button htmlType="submit" className="w-full bg-[#fbd02a]">
               Submit
             </Button>
           </Form.Item>
